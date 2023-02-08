@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./style.css";
 const Details = () => {
-  const { id } = useParams();
+  const { id } = useParams() || 17827;
   const [details, setDetails] = useState();
   const getDetails = async () => {
     try {
@@ -35,8 +35,8 @@ const Details = () => {
     <div>
       {details && (
         <div>
-          <h1>{details.strDrink}</h1>
-          <img className="details-image" src={details.strDrinkThumb} alt="cocktail" />
+          <h1 role='heading'>{details.strDrink}</h1>
+          <img role='img' className="details-image" src={details.strDrinkThumb} alt="cocktail" />
           <h2>Preparation:</h2>
           <div className="container">
             <div className="ingredients">

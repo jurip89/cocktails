@@ -8,9 +8,9 @@ const SearchForm = ({submit}) => {
     setSearchStr('')
     }
   return (
-    <form onSubmit={handleSubmit}>
+    <form role='form' onSubmit={handleSubmit}>
               <input type="text" placeholder='Search your cocktail here'value={searchStr} onChange={(e)=> setSearchStr(e.target.value)} />
-              <button type="submit" >Search</button>
+              <button role='button' type="submit" >Search</button>
           </form>
   )
 }
