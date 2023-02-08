@@ -1,7 +1,7 @@
 import { render,screen } from "@testing-library/react";
 import { Home } from "../pages";
 
-describe('App.js', () => {
+describe('Home.js', () => {
     it('should render', () => {
         render(<Home />);
         screen.debug()

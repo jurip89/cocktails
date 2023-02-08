@@ -1,4 +1,4 @@
-img{
+.details-image{
     max-width: 20%;
 }
 
@@ -16,16 +16,16 @@ img{
 
 
 @media only screen and (max-width: 1600px) {
-    img {
+    .details-image {
         max-width: 30%;
     }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     .container {
         
         grid-template-columns: 1fr;
     }
-   img {
-       max-width: 60%;
+   .details-image {
+       max-width: 50%;
    }
 }

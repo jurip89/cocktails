@@ -26,13 +26,13 @@ const fetchData = async () => {
   }
 
   return (
-    <main className="App">
+    <div>
       <SearchForm submit={ fetchSearch} />
      <section role='contentinfo'>
         {data.length > 0 && data.map(el => (
           <DrinkCard key={el.idDrink} el={el}/>
       ))}  
         </section>
-    </main>
+    </div>
   );
 }

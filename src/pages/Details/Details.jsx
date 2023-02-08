@@ -36,7 +36,7 @@ const Details = () => {
       {details && (
         <div>
           <h1>{details.strDrink}</h1>
-          <img src={details.strDrinkThumb} alt="cocktail" />
+          <img className="details-image" src={details.strDrinkThumb} alt="cocktail" />
           <h2>Preparation:</h2>
           <div className="container">
             <div className="ingredients">
