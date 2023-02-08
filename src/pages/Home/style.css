@@ -1,34 +1,32 @@
-#root {
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+
 section{
   margin: 0 auto;
-  border: 1px solid red;
-  width: 80vw;
+  
   display: grid;
   
 }
 
 @media only screen and (min-width: 600px) {
   section{
+    width: 60vw;
     grid-template-columns: 1fr;
   }
 }
 @media only screen and (min-width: 768px) {
   section {
       grid-template-columns: repeat(2,1fr);
+      width: 80vw;
     }
 }
 @media only screen and (min-width: 992px) {
   section {
       grid-template-columns: repeat(3, 1fr);
+      width: 80vw;
     }
 }
 @media only screen and (min-width: 1400px) {
   section {
       grid-template-columns: repeat(4, 1fr);
+      width: 80vw;
     }
 }

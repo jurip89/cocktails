@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { DrinkCard,SearchForm } from "../../components";
 import axios from "axios";
-import "./App.css";
+import "./style.css";
 
-export default function App() {
+export default function Home() {
   const [data, setData] = useState([]);
 
 const fetchData = async () => {
@@ -20,25 +20,17 @@ const fetchData = async () => {
   useEffect(() => {
      fetchData()
   }, []);
-
+  const fetchSearch = async (str) => {
+    const res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${str}`)
+    setData(res.data.drinks)
+  }
 
   return (
     <main className="App">
+      <SearchForm submit={ fetchSearch} />
      <section role='contentinfo'>
         {data.length > 0 && data.map(el => (
-          <div key={el.idDrink}>
-            
-              
-              
-            <figure><h2>{el.strDrink}</h2>
-              <div
-                className="image"
-              style={{backgroundImage:`url(${el.strDrinkThumb
-                    })`}} alt="cocktail" />
-                <figcaption>{el.strCategory}</figcaption>
-              </figure>
-              <Link className="link" to={`/cocktail/${el.idDrink}`}><button>Details</button></Link>
-        </div>
+          <DrinkCard key={el.idDrink} el={el}/>
       ))}  
         </section>
     </main>

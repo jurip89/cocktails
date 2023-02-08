@@ -1,0 +1,11 @@
+form{
+    margin: 2% auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    justify-content: center;
+}
+
+input{
+    width: 50%;
+}

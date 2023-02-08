@@ -1,0 +1,10 @@
+nav{
+    width: 100%;
+    
+    border: thin solid #333;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
