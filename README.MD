@@ -30,7 +30,7 @@ For build this app I used React as framework with Vite setup
 ## The folder structure
 
 I tried to keep everything as tidy as possible because I like to work in an ordered folder.
-In the main directory there are setup files and the `src` folder. The `public` folder is empty.
+In the main directory there are setup files and the `src` folder.
 inside `src` there are 3 main folders `components` `pages` and `test`
 
 - `components` store other folders in which is stored a `.jsx` file for the actual component and a `style.css` in this way I can modify the CSS of the specific component without looking inside a single giant file, I also added an index.js file for the exports.
