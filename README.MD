@@ -22,14 +22,14 @@ For build this app I used React as framework with Vite setup
 - `Vite` has less boilerplate files and folders and it creates the directory quite faster than CRA
 - I used `react-router-dom` for the routing and I tried this time a different approach than I used normally because the v 6.4 has been released and I wanted to try it out, I setted up the routes in the `main.js` (it is where I mostly used this package) and I also used the hook `useParams` for call dynamicaly the API.
 - Unit testing (my first time) I used `vitest` with `jsdom`, `@testing-library/user-event`,`@testing-library/react` and `@testing-library/react`. With vite there is no boilerplate test configuaration so I had to look up how to configure all in the file `vite.config.js`
-- I used plain CSS for the styles
+- I used plain CSS for the styles with grid approach and media queries for responsiveness
 - For API calls I used `axios` because is simple to use it and I am quite familiar with it
 
 ---
 
 ## The folder structure
 
-I tried to keep everything as tidy as possible because I like to work in an ordered folder.
+I tried to keep everything as tidy as possible.
 In the main directory there are setup files and the `src` folder.
 inside `src` there are 3 main folders `components` `pages` and `test`
 
