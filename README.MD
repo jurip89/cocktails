@@ -53,6 +53,8 @@ In the branch solutionB there are a couple of difference:
 - In the folder src/components/DrinkCard you will notice an extra file: `SmartDrinkCard.jsx`, it is a stateful component that make an API call to the random endpoint and drill down the data obtained to `<DrinkCard/>` component.
 - The `<Home/>` component is without `useEffect` hook instead it gets data only from the trigger of the search function and for render random cocktails there is a `.map` of 16 `<SmartDrinkCard/>` 
 
+I utilize this 2 different approach even if the best would have be to pay the 2.50 euros for have the private key
+
 There is an error when there are no search resoults, I left it for make use of the `ErrorPage`
 
 ---
