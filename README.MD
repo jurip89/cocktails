@@ -2,6 +2,8 @@
 
 ## Setup
 
+I deployed this app in Netlify, if you want here is the [Link](https://jazzy-manatee-cfb947.netlify.app)
+
 `npm i`
 
 `npm run dev` port http://localhost:5173/

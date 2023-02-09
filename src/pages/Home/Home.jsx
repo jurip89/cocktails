@@ -8,13 +8,14 @@ export default function Home() {
 
 const fetchData = async () => {
     const probability = ['a', 'b', 'z', 'd',"p",'f','g']
-    const index = Math.floor(Math.random()*7)
+  const index = Math.floor(Math.random() * 7)
+ 
     const res =  await axios.get(
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${probability[index]}`
     )
     const newData = res.data.drinks.slice(9)
       setData(newData)
-    console.log(newData)
+    
   };
   
   useEffect(() => {

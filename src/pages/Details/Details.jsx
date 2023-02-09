@@ -10,7 +10,7 @@ const Details = () => {
       const res = await axios.get(
         `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
       );
-      console.log(res);
+      
       res.data.drinks ? setDetails(...res.data.drinks) : setDetails(undefined);
     } catch (error) {
       throw new Error(error);
