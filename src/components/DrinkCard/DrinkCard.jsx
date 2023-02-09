@@ -1,7 +1,12 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import "./style.css";
+
+
+
 const DrinkCard = ({ el }) => {
+
   return (
     <div role='contentinfo'>
       <figure role='figure'>

@@ -32,7 +32,7 @@ const Details = () => {
       .filter((el) => el.startsWith("strMeasure"))
       .filter((el) => details[el] !== null);
   return (
-    <div>
+    <div>{console.log(details) }
       {details && (
         <div>
           <h1 role='heading'>{details.strDrink}</h1>
