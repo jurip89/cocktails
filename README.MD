@@ -2,7 +2,7 @@
 
 ## Setup
 
-I deployed this app in Netlify, if you want here is the [Link](https://jazzy-manatee-cfb947.netlify.app)
+I deployed this app in Netlify, if you want the link is in the about section of this page
 
 `npm i`
 
