@@ -10,7 +10,10 @@ const Details = () => {
       const res = await axios.get(
         `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
       );
-      
+      const res2 = await axios.get(
+        "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list"
+      );
+      console.log(res2.data.drinks);
       res.data.drinks ? setDetails(...res.data.drinks) : setDetails(undefined);
     } catch (error) {
       throw new Error(error);
@@ -32,31 +35,50 @@ const Details = () => {
       .filter((el) => el.startsWith("strMeasure"))
       .filter((el) => details[el] !== null);
   return (
-    <div>{console.log(details) }
+    <div>
+      {console.log(details)}
       {details && (
         <div>
-          <h1 role='heading'>{details.strDrink}</h1>
-          <img role='img' className="details-image" src={details.strDrinkThumb} alt="cocktail" />
+          <h1 role="heading">{details.strDrink}</h1>
+         
+            <img
+              role="img"
+              className="details-image"
+              src={details.strDrinkThumb}
+              alt="cocktail"
+            />
+        
+
           <h2>Preparation:</h2>
           <div className="container">
             <div className="ingredients">
               <h3>Ingredients:</h3>
-          {keysIngredient.map((el, i) => (
-            <p key={i}>
-              {" "}
-              <b>{details[el]}</b> {details[keysMesures[i]]}
-            </p>
-          ))}
+              {keysIngredient.map((el, i) => (
+                <p key={i}>
+                  {" "}
+                  <b>{details[el]}:</b> {details[keysMesures[i]]}
+                </p>
+              ))}
             </div>
-             <div className="instuctions">
-            <h3>Instructions:</h3>
-            <p>{details.strInstructions}</p>
+            <div className="details">
+              <h3>Details:</h3>
+              <p>
+                <b>Glass:</b> {details.strGlass}
+              </p>
+              <p>
+                <b>Alcoholic:</b> {details.strAlcoholic}
+              </p>
+              <p>
+                <b>Category:</b> {details.strCategory}
+              </p>
+            </div>
+
+            <div className="instuctions">
+              <h3>Instructions:</h3>
+              <p>{details.strInstructions}</p>
+            </div>
           </div>
         </div>
-          </div>
-          
-
-         
       )}
     </div>
   );

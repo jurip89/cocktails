@@ -49,8 +49,6 @@ I tried to be DRY as much as possible I can Improve the semanthic and use a diff
 
 There is a randomality required to display in the `Home`, as the API provided is with payment required I've just been creative. I have created a function that send me on the 1st render a list of cocktails and there are 7 possibilities that the list is different.
 
-There is an error when there are no search resoults, I left it for make use of the `ErrorPage`
-
 ---
 
 ## Thanks

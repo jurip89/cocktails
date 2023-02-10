@@ -3,7 +3,8 @@ import './style.css'
 const SearchForm = ({submit}) => {
   const [searchStr, setSearchStr] = useState('');
   const handleSubmit = (e) => {
-        e.preventDefault()
+    e.preventDefault()
+    if (!searchStr) return
     submit(searchStr)
     setSearchStr('')
     }

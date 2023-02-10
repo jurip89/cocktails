@@ -5,9 +5,7 @@ import "./style.css";
 
 export default function Home() {
   const [data, setData] = useState(undefined);
-
-
-  
+ 
   const arr = new Array(16).fill(null)
   
   
