@@ -1,19 +1,15 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { URL } from "../../constants";
 import "./style.css";
 const Details = () => {
   const { id } = useParams() || 17827;
   const [details, setDetails] = useState();
   const getDetails = async () => {
     try {
-      const res = await axios.get(
-        `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
-      );
-      const res2 = await axios.get(
-        "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list"
-      );
-      console.log(res2.data.drinks);
+      const res = await axios.get(`${URL}/lookup.php?i=${id}`);
+
       res.data.drinks ? setDetails(...res.data.drinks) : setDetails(undefined);
     } catch (error) {
       throw new Error(error);
