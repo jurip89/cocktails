@@ -47,7 +47,10 @@ As you notice there is not an `App.js` this is my first time I do without. Is be
 
 I tried to be DRY as much as possible I can Improve the semanthic and use a different approach in the CSS selectors
 
-There is a randomality required to display in the `Home`, as the API provided is with payment required I've just been creative. I have created a function that send me on the 1st render a list of cocktails and there are 7 possibilities that the list is different.
+There is a requirement that ask for a list of random drink in the `Home` page, as the API provided allows only for one random cocktail unless payment for use the endpoint for have 10, I rendered 16 singles components that make a get request to the single random endpoint.
+(I am not sure if it is best practice, I just take this approach for fulfill the requirement)
+
+Different story with the search function that get the multiple results from a single endpoint.
 
 ---
 
