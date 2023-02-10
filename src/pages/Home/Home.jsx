@@ -1,26 +1,16 @@
 import { useState, useEffect } from "react";
-import { DrinkCard,SearchForm } from "../../components";
+import { DrinkCard,SearchForm,SmartDrinkCard } from "../../components";
 import axios from "axios";
 import "./style.css";
 
 export default function Home() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(undefined);
 
-const fetchData = async () => {
-    const probability = ['a', 'b', 'z', 'd',"p",'f','g']
-  const index = Math.floor(Math.random() * 7)
- 
-    const res =  await axios.get(
-      `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${probability[index]}`
-    )
-    const newData = res.data.drinks.slice(9)
-      setData(newData)
-    
-  };
+
   
-  useEffect(() => {
-     fetchData()
-  }, []);
+  const arr = new Array(16).fill(null)
+  
+  
   const fetchSearch = async (str) => {
     const res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${str}`)
     setData(res.data.drinks)
@@ -30,9 +20,10 @@ const fetchData = async () => {
     <div>
       <SearchForm submit={ fetchSearch} />
      <section role='contentinfo'>
-        {data.length > 0 && data.map(el => (
+        { data ? data.map(el => (
           <DrinkCard key={el.idDrink} el={el}/>
-      ))}  
+        )):arr.map((el, i) => <SmartDrinkCard key={i}/>)}  
+        
         </section>
     </div>
   );
