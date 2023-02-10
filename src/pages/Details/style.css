@@ -21,7 +21,7 @@
 .container {
   gap: 1%;
   width: 80%;
-  margin: 0 auto;
+  margin: 2% auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
