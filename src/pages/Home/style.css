@@ -1,32 +1,30 @@
-
-section{
+section {
   margin: 0 auto;
-  
+
   display: grid;
-  
 }
 
 @media only screen and (min-width: 600px) {
-  section{
+  section {
     width: 60vw;
     grid-template-columns: 1fr;
   }
 }
 @media only screen and (min-width: 768px) {
   section {
-      grid-template-columns: repeat(2,1fr);
-      width: 80vw;
-    }
+    grid-template-columns: repeat(2, 1fr);
+    width: 80vw;
+  }
 }
 @media only screen and (min-width: 992px) {
   section {
-      grid-template-columns: repeat(3, 1fr);
-      width: 80vw;
-    }
+    grid-template-columns: repeat(3, 1fr);
+    width: 80vw;
+  }
 }
 @media only screen and (min-width: 1400px) {
   section {
-      grid-template-columns: repeat(4, 1fr);
-      width: 80vw;
-    }
+    grid-template-columns: repeat(4, 1fr);
+    width: 80vw;
+  }
 }

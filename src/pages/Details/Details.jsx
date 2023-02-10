@@ -40,14 +40,13 @@ const Details = () => {
       {details && (
         <div>
           <h1 role="heading">{details.strDrink}</h1>
-         
-            <img
-              role="img"
-              className="details-image"
-              src={details.strDrinkThumb}
-              alt="cocktail"
-            />
-        
+
+          <img
+            role="img"
+            className="details-image"
+            src={details.strDrinkThumb}
+            alt="cocktail"
+          />
 
           <h2>Preparation:</h2>
           <div className="container">

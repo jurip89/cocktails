@@ -1,17 +1,17 @@
-form{
-    margin: 2% auto;
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    justify-content: center;
+form {
+  margin: 2% auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: center;
 }
 
-input{
-    width: 40%;
+input {
+  width: 40%;
 }
 
 @media only screen and (max-width: 600px) {
-    form {
-        width: 90%;
-    }
+  form {
+    width: 90%;
+  }
 }
