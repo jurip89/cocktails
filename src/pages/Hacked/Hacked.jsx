@@ -1,5 +1,5 @@
 import React from "react";
-
+import Countdown from "react-countdown";
 const Hacked = () => {
   return (
     <div className="hacked">
@@ -9,6 +9,7 @@ const Hacked = () => {
         in 24hrs Otherwise I will publish all your picture and then destroy all
         your file in this computer
       </p>
+      <Countdown date={Date.now() + 86400000} />
     </div>
   );
 };
