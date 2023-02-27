@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Home, ErrorPage, Details, RootLayout } from "./pages";
+import { Home, ErrorPage, Details, RootLayout, Hacked } from "./pages";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       {
         path: "/cocktail/:id",
-        element: <Details />,
+        element: <Hacked />,
         errorElement: <ErrorPage />,
       },
     ],
