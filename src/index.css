@@ -9,7 +9,11 @@
 
   text-align: center;
 }
-
+.hacked {
+  background-color: rgb(228, 107, 107);
+  width: 100vw;
+  height: 100vh;
+}
 body {
   margin: 0;
 }

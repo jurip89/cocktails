@@ -2,7 +2,7 @@ import React from "react";
 
 const Hacked = () => {
   return (
-    <div>
+    <div className="hacked">
       <h1>You have Been Hacked</h1>
       <p>
         Send 100 ETH to this address: 0x822ae969816C2b29de852498e8d53F9c9EaD3af0
